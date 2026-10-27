@@ -2,13 +2,14 @@
 
 The `ballerinax/bintable` connector provides practical examples illustrating usage in various scenarios.
 
-[//]: # (TODO: Add examples)
-1. 
-2. 
+1. [Card BIN verification](./card_bin_verification/card_bin_verification.md) - Check the account balance, then look up the card details of a BIN.
+2. [Account balance monitoring](./account_balance_monitoring/account_balance_monitoring.md) - Report the account balance and verify that the key can serve lookups.
 
 ## Prerequisites
 
-[//]: # (TODO: Add prerequisites)
+1. A Bintable API key from [bintable.com](https://bintable.com).
+
+2. A `Config.toml` file in the example directory with the values described in the example's documentation.
 
 ## Running an example
 
