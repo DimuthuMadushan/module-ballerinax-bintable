@@ -48,7 +48,7 @@ To use the `bintable` connector in your Ballerina application, update the `.bal`
 
     ```ballerina
     public function main() returns error? {
-        bintable:ResponseItem[] _ = check bintableClient->lookupBin("457173");
+        bintable:ResponseItem _ = check bintableClient->lookupBin("457173");
     }
     ```
 

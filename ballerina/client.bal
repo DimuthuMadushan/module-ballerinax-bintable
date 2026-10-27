@@ -40,7 +40,7 @@ public isolated client class Client {
     # + bin - pass the required BIN code
     # + headers - Headers to be sent with the request 
     # + return - BIN data response 
-    remote isolated function lookupBin(string bin, map<string|string[]> headers = {}) returns ResponseItem[]|error {
+    remote isolated function lookupBin(string bin, map<string|string[]> headers = {}) returns ResponseItem|error {
         string resourcePath = string `/${getEncodedUri(bin)}`;
         map<anydata> queryParam = {};
         queryParam["api_key"] = self.apiKeyConfig.apiKey;
@@ -52,7 +52,7 @@ public isolated client class Client {
     #
     # + headers - Headers to be sent with the request 
     # + return - Balance reponse 
-    remote isolated function getBalance(map<string|string[]> headers = {}) returns ResponseItem[]|error {
+    remote isolated function getBalance(map<string|string[]> headers = {}) returns ResponseItem|error {
         string resourcePath = string `/balance`;
         map<anydata> queryParam = {};
         queryParam["api_key"] = self.apiKeyConfig.apiKey;

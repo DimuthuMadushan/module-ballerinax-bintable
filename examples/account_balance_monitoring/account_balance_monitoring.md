@@ -13,6 +13,8 @@ apiKey = "<API_KEY>"
 sampleBin = "<BIN>"
 ```
 
+> **Note**: Each successful BIN lookup draws down the account balance, so running this example repeatedly, for example on a schedule, can exhaust the balance. The Bintable API then responds with `401` (balance exhausted or package expired).
+
 ## Run the example
 
 ```bash

@@ -18,6 +18,7 @@ These changes are done in order to improve the overall usability, and as workaro
 4. **`balanceLookup` response media type** changed from `*/*` to `application/json`, so the operation returns `ResponseItem[]` instead of `http:Response`. Changed in `docs/spec/openapi.yaml`.
 
 5. **Operation renames.** `binLookup` is `lookupBin` and `balanceLookup` is `getBalance` (persisted in `docs/spec/ai-mappings.json`).
+6. **200 response schemas** of `binLookup` and `balanceLookup` changed from an array of `ResponseItem` to a single `ResponseItem`, as the API returns a bare object. Changed in `docs/spec/openapi.yaml`.
 
 ## OpenAPI cli command
 

@@ -28,21 +28,19 @@ service / on ep0 {
     # http:Unauthorized (Your balance is exhausted,or package expired)
     # http:Forbidden (Invalid API Key)
     # http:UnprocessableEntity (API key is missing)
-    resource function get [string bin]() returns ResponseItem[]|http:Unauthorized|http:Forbidden|http:UnprocessableEntity {
-        return [
-            {
-                result: 200,
-                message: "SUCCESS",
-                data: {
-                    "bin": bin,
-                    "brand": "VISA",
-                    "type": "CREDIT",
-                    "category": "CLASSIC",
-                    "issuer": "JPMORGAN CHASE BANK N.A.",
-                    "country": {"alpha2": "US", "name": "United States"}
-                }
+    resource function get [string bin]() returns ResponseItem|http:Unauthorized|http:Forbidden|http:UnprocessableEntity {
+        return {
+            result: 200,
+            message: "SUCCESS",
+            data: {
+                "bin": bin,
+                "brand": "VISA",
+                "type": "CREDIT",
+                "category": "CLASSIC",
+                "issuer": "JPMORGAN CHASE BANK N.A.",
+                "country": {"alpha2": "US", "name": "United States"}
             }
-        ];
+        };
     }
 
     # Check Balance
@@ -52,16 +50,14 @@ service / on ep0 {
     # http:Unauthorized (Your balance is exhausted,or package expired)
     # http:Forbidden (Invalid API Key)
     # http:UnprocessableEntity (API key is missing)
-    resource function get balance() returns ResponseItem[]|http:Unauthorized|http:Forbidden|http:UnprocessableEntity {
-        return [
-            {
-                result: 200,
-                message: "SUCCESS",
-                data: {
-                    "balance": 4850,
-                    "expiry": "2027-12-31"
-                }
+    resource function get balance() returns ResponseItem|http:Unauthorized|http:Forbidden|http:UnprocessableEntity {
+        return {
+            result: 200,
+            message: "SUCCESS",
+            data: {
+                "balance": 4850,
+                "expiry": "2027-12-31"
             }
-        ];
+        };
     }
 }

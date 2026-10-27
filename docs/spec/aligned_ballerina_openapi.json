@@ -60,10 +60,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "type": "array",
-                                    "items": {
-                                        "$ref": "#/components/schemas/ResponseItem"
-                                    }
+                                    "$ref": "#/components/schemas/ResponseItem"
                                 }
                             }
                         }
@@ -94,10 +91,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "type": "array",
-                                    "items": {
-                                        "$ref": "#/components/schemas/ResponseItem"
-                                    }
+                                    "$ref": "#/components/schemas/ResponseItem"
                                 }
                             }
                         }

@@ -45,9 +45,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/ResponseItem'
+                $ref: '#/components/schemas/ResponseItem'
         '401':
           description: Your balance is exhausted,or package expired
         '403':
@@ -67,9 +65,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/ResponseItem'
+                $ref: '#/components/schemas/ResponseItem'
         '401':
           description: Your balance is exhausted,or package expired
         '403':

@@ -25,14 +25,14 @@ final Client bintable = check new ({apiKey}, serviceUrl = serviceUrl);
 
 @test:Config {groups: ["live_tests", "mock_tests"]}
 isolated function testLookupBin() returns error? {
-    ResponseItem[] response = check bintable->lookupBin("457173");
-    test:assertTrue(response.length() > 0);
-    test:assertEquals(response[0].result, 200);
+    ResponseItem response = check bintable->lookupBin("457173");
+    test:assertEquals(response.result, 200);
+    test:assertEquals(response.message, "SUCCESS");
 }
 
 @test:Config {groups: ["live_tests", "mock_tests"]}
 isolated function testGetBalance() returns error? {
-    ResponseItem[] response = check bintable->getBalance();
-    test:assertTrue(response.length() > 0);
-    test:assertEquals(response[0].message, "SUCCESS");
+    ResponseItem response = check bintable->getBalance();
+    test:assertEquals(response.result, 200);
+    test:assertEquals(response.message, "SUCCESS");
 }
